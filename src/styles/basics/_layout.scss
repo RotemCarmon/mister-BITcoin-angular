@@ -1,0 +1,18 @@
+.main-layout{
+  display: grid;
+    grid-template-columns: 
+        minmax(1rem, auto)
+        minmax(auto, 900px)
+        minmax(1rem, auto) ;
+    grid-template-rows: 60px auto minmax(min-content, max-content);
+    min-height: 100vh;
+
+    > * {
+        grid-column: 2;
+    } 
+
+    .app-header{
+        grid-row: 1;
+    }
+}
+  

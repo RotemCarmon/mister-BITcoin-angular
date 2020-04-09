@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Helvetica, Arial, sans-serif;
+    color: $main;
+}
+
+body {
+    margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+    font-weight: 400;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+
+    &:focus{
+        outline: none;
+    }
+}
+
+button{
+    all: unset
+}
+
+

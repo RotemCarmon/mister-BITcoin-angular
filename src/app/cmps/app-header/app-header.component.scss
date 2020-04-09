@@ -1,0 +1,10 @@
+.app-header-container {
+    padding: 5px;
+
+    .navbar > * {
+        text-align: center;
+        width: 80px;
+        height: 50px;
+        font-weight: 700;
+    }
+}

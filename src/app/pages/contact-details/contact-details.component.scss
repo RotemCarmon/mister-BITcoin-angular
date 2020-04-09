@@ -1,0 +1,21 @@
+.contact-details-container {
+    background-color: seashell;
+    border-radius: 1em;
+    width: 90%;
+    padding: 30px;
+    font-size: 1.25em;
+    font-weight: 400;
+    margin: auto;
+    margin-top: 20px;
+    .contact-img {
+        width: 180px;
+        border-radius: 50%;
+        background-color: white;
+    }
+    .contact-info {
+        h3:not(:last-child){
+            margin-bottom: 20px;   
+        }
+    }
+
+}

@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+// BASIC
+@import './styles/basics/typography';
+@import './styles/basics/mixins';
+@import './styles/basics/variables';
+@import './styles/basics/base';
+@import './styles/basics/helpers';
+@import './styles/basics/layout';
+@import './styles/basics/buttons';

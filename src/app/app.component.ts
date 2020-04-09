@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'mister-BITcoin';
+  // isShowing: string = 'home';
+  isShowing: string = 'statistic';
+
+  togglePages(page) {
+    this.isShowing = page;
+  }
 }

@@ -1,0 +1,30 @@
+
+.btn{
+    background-color: $btn;
+    color: $nutral;
+    font-size: 1.25rem;
+    text-align: center;
+    min-width: 65px;
+    padding: 8px;
+    margin: 5px;
+    border-radius: 3px;
+    
+    &:hover{
+        background-color: lighten($btn,5%);
+        cursor: pointer;
+    }
+    &:active{
+        box-shadow:inset 0 0 8px darken($btn,5%);
+    }
+}
+
+.nav-btn {
+    box-shadow:0 ;
+    padding: 2px;
+    transition: all .4s;
+    &:hover {
+        box-shadow:0 3px 0 lightskyblue;
+        cursor: pointer;
+    }
+
+}
