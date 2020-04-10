@@ -11,6 +11,7 @@ import { BitcoinService } from 'src/app/services/bitcoin-service.service';
 export class HomePageComponent implements OnInit {
   user: User = null;
   rate: any;
+  USD: string;
   constructor(
     private userService: UserService,
     private bitcoinService: BitcoinService
@@ -25,7 +26,14 @@ export class HomePageComponent implements OnInit {
     this.user = this.userService.getUser();
   }
   async getRate() {
-    let prm = await this.bitcoinService.getRate();
-    this.rate = prm.data;
+    var rate: any = JSON.parse(localStorage.getItem('rate'));
+    
+    if (!rate) {
+      const prm = await this.bitcoinService.getRate();
+      rate = prm.data;
+      localStorage.setItem('rate', JSON.stringify(rate));
+    }
+    
+    this.USD = `$${((1/ this.rate ) * this.user.coins).toFixed(2)}`;
   }
 }
