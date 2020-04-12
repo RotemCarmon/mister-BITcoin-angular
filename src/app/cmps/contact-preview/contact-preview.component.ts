@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Contact } from 'src/app/models/contact.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'contact-preview',
@@ -8,18 +9,13 @@ import { Contact } from 'src/app/models/contact.model';
 })
 export class ContactPreviewComponent implements OnInit {
   @Input() contact: Contact;
-  @Output() sendContactId = new EventEmitter()
 
-  constructor() { }
+  constructor( private router: Router) { }
+
   ngOnInit(): void {
   }
 
-  showContactDetails() {
-    this.sendContactId.emit(this.contact._id)
+  showContactDetails () {
+    this.router.navigateByUrl(`contact/${this.contact._id}`)
   }
-
-
-
-
-
 }
