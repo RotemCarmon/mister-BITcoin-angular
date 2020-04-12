@@ -12,7 +12,6 @@ import { Subscription } from 'rxjs';
 export class ContactPageComponent implements OnInit, OnDestroy {
   contacts : Contact[] = []
   subscription: Subscription
-  contactId: string = null;
   filterBy = { term: '' }
   
 
@@ -20,17 +19,10 @@ export class ContactPageComponent implements OnInit, OnDestroy {
     this.subscription = this.contactService.contacts$.subscribe((contacts) => {
       this.contacts = [...contacts];
   })
-}
+  }
 
   ngOnInit(): void {
     this.contactService.loadContacts()
-  }
-  
-  setContactId($event) {
-    this.contactId = $event;
-  }
-  setIdToNull() {
-    this.contactId = null;
   }
   ngOnDestroy(): void {
     this.subscription.unsubscribe();

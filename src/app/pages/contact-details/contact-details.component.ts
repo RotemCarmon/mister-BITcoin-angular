@@ -1,6 +1,7 @@
-import { Component, OnInit, Input, Output, EventEmitter, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Contact } from 'src/app/models/contact.model';
 import { ContactService } from 'src/app/services/contact.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'contact-details',
@@ -8,28 +9,36 @@ import { ContactService } from 'src/app/services/contact.service';
   styleUrls: ['./contact-details.component.scss']
 })
 export class ContactDetailsComponent implements OnInit, OnDestroy {
-  @Input() contactId: string;
-  @Output() setIdToNull = new EventEmitter();
   contact: Contact;
-  subscription
-  constructor(private contactService:ContactService) { }
+  id: string;
+  idSub;
+  contactSub
+  constructor(private contactService:ContactService,private router: Router, private route: ActivatedRoute,) { }
 
   ngOnInit(): void {
+    this.getParams()
     this.getContactById()
+  }
+
+  getParams() {
+    this.idSub = this.route.params.subscribe(params => {
+      this.id = params['id']
+    })
   }
   
   getContactById() :void{
-    this.subscription = this.contactService.getContactById(this.contactId)
+    this.contactSub = this.contactService.getContactById(this.id)
       .subscribe((contact) => {
         this.contact = contact;
       })
   }
 
   goBack(){
-    this.setIdToNull.emit()
+    this.router.navigateByUrl('contact')
   }
 
   ngOnDestroy(): void {
-    this.subscription.unsubscribe();
+    this.idSub.unsubscribe();
+    this.contactSub.unsubscribe();
   }
 }

@@ -1,16 +1,7 @@
 <section class="contact-page-container">
-    <contact-details
-        *ngIf="contactId; else conatctList"
-        [contactId]="contactId"
-        (setIdToNull)="setIdToNull()"
-    ></contact-details>
-    
-    <ng-template #conatctList>
-        <contact-filter (setFilterBy)="setFilterBy($event)" [filterBy]="filterBy"></contact-filter>
-        <contact-list
-            [contacts]="contacts"
-            (sendContactId)="setContactId($event)">
-        </contact-list>
-    </ng-template>
+    <contact-filter (setFilterBy)="setFilterBy($event)" [filterBy]="filterBy"></contact-filter>
+    <contact-list
+        [contacts]="contacts">
+    </contact-list>
 </section>
 
