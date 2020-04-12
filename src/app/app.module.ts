@@ -16,7 +16,6 @@ import { ContactPreviewComponent } from './cmps/contact-preview/contact-preview.
 import { ContactDetailsComponent } from './pages/contact-details/contact-details.component';
 import { ContactEditComponent } from './pages/contact-edit/contact-edit.component';
 import { AppHeaderComponent } from './cmps/app-header/app-header.component';
-import { ChartComponent } from './cmps/chart/chart.component';
 import { AppFooterComponent } from './cmps/app-footer/app-footer.component';
 
 
@@ -32,7 +31,6 @@ import { AppFooterComponent } from './cmps/app-footer/app-footer.component';
     ContactDetailsComponent,
     ContactEditComponent,
     AppHeaderComponent,
-    ChartComponent,
     AppFooterComponent,
   ],
   imports: [
