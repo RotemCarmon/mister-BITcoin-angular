@@ -4,7 +4,8 @@
 
 html{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Helvetica, Arial, sans-serif;
-    color: $main;
+    color: $text;
+    background: linear-gradient(304deg, rgba(34,34,53,1) 38%, rgba(39,39,81,1) 100%);
 }
 
 body {

@@ -1,11 +1,14 @@
-<section class="contact-details-container flex space-around align-center">
+<section class="contact-details-container flex space-between">
     <div class="contact-img ratio-square">
-        <img src="https://robohash.org/+{{contact.name}}" alt="">
+        <img src="https://robohash.org/{{contact.name}}" alt="">
     </div>
-    <div class="contact-info">
+    <div class="contact-info flex column space-between">
         <h3>Name: {{contact.name}}</h3>
         <h3>Phone: {{contact.phone}}</h3>
         <h3>Email: {{contact.email}}</h3>
     </div>
-    <button class="go-back-btn btn" (click)="goBack()">Back</button>
+    <div class="actions flex column space-between">
+        <button class="delete-btn" (click)="deleteContact()">Delete</button>
+        <button class="go-back-btn btn" (click)="goBack()">Back</button>
+    </div>
 </section>

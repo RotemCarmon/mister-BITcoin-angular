@@ -1,29 +1,30 @@
 <google-chart
-  class="market-price"
+  class="chart market-price"
   [type]="marketChartType"
   [data]="marketChartData"
   [title]="marketChartName"
   [options]="chartOption"
   [dynamicResize]="true"
   ></google-chart>
+
 <div class="small-charts flex">
 
-<google-chart
-    class="trade-volume"
-    [type]="tradeChartType"
-    [data]="tradeChartData"
-    [title]="tradeChartName"
-    [options]="chartOption"
-    [dynamicResize]="true"
+    <google-chart
+      class="chart trade-volume"
+      [type]="tradeChartType"
+      [data]="tradeChartData"
+      [title]="tradeChartName"
+      [options]="chartOption"
+      [dynamicResize]="true"
     ></google-chart>
     
     <google-chart
-    class="confirm-transaction"
-    [type]= "transactionChartType"
-    [data]= "transactionChartData"
-    [title]="transactionChartName"
-    [options]="chartOption"
-    [dynamicResize]="true"
+      class="chart confirm-transaction"
+      [type]= "transactionChartType"
+      [data]= "transactionChartData"
+      [title]="transactionChartName"
+      [options]="chartOption"
+      [dynamicResize]="true"
     ></google-chart>
     
 </div>

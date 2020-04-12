@@ -1,21 +1,22 @@
 .contact-details-container {
-    background-color: seashell;
-    border-radius: 1em;
-    width: 90%;
+    background-color: rgb(41, 41, 66);
+    box-shadow: -2px 2px 4px 0px #282835;
+    width: 100%;
     padding: 30px;
     font-size: 1.25em;
-    font-weight: 400;
     margin: auto;
-    margin-top: 20px;
+    margin-top: 30px;
     .contact-img {
         width: 180px;
         border-radius: 50%;
         background-color: white;
+        align-self: center;
     }
-    .contact-info {
-        h3:not(:last-child){
-            margin-bottom: 20px;   
+    .delete-btn {
+        text-decoration: underline;
+
+        &:hover {
+            cursor: pointer;
         }
     }
-
 }

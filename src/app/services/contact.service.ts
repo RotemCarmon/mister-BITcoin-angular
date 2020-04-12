@@ -155,9 +155,9 @@ export class ContactService {
   }
 
   public deleteContact(id: string) {
-    //mock the server work
+    //mock the server work      
     this._contacts = this._contacts.filter(contact => contact._id !== id)
-
+    
     // change the observable data in the service - let all the subscribers know
     this._contacts$.next(this._contacts)
   }
@@ -189,7 +189,6 @@ export class ContactService {
       if (a.name.toLocaleLowerCase() > b.name.toLocaleLowerCase()) {
         return 1;
       }
-
       return 0;
     })
   }
