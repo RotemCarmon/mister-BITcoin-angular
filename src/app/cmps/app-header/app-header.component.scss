@@ -13,9 +13,11 @@
             width: 80px;
             padding: 20px 10px;
             font-size: 1.1em;
+            font-weight: 700;
         }
     }
     .active {
+    color: #E88C30;
         &:hover {
             cursor: pointer;
         }

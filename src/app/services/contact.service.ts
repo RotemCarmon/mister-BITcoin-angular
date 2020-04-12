@@ -122,19 +122,18 @@ const CONTACTS = [
   }
 ];
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class ContactService {
-
   //mock the server
   private _contacts: Contact[] = CONTACTS;
   private _contacts$ = new BehaviorSubject<Array<Contact>>([])
   public contacts$ = this._contacts$.asObservable()
   
+  constructor() { }
   
-  constructor() {
-  }
   
   
   public loadContacts(filterBy = null): void {
@@ -147,7 +146,6 @@ export class ContactService {
   }
   
   
-  // public getContactById(id: string): Contact {
   public getContactById(id: string): Observable<Contact> {
       //mock the server work
       var contact = this._contacts.find(contact => contact._id === id)
@@ -162,7 +160,7 @@ export class ContactService {
     this._contacts$.next(this._contacts)
   }
 
-  public saveContact(contact: Contact) {
+  public saveContact(contact: Contact) {    
     return contact._id ? this._updateContact(contact) : this._addContact(contact)
   }
 
@@ -175,8 +173,10 @@ export class ContactService {
 
   private _addContact(contact: Contact) {
     //mock the server work
+    
     const newContact = new Contact(contact.name, contact.email, contact.phone);
     newContact.setId();
+    console.log('saved', newContact);
     this._contacts.push(newContact)
     this._contacts$.next(this._sort(this._contacts))
   }
@@ -201,5 +201,5 @@ export class ContactService {
         contact.phone.toLocaleLowerCase().includes(term) ||
         contact.email.toLocaleLowerCase().includes(term)
     })
-  }
+  } 
 }

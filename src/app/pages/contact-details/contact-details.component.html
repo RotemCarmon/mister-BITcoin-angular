@@ -7,8 +7,9 @@
         <h3>Phone: {{contact.phone}}</h3>
         <h3>Email: {{contact.email}}</h3>
     </div>
-    <div class="actions flex column space-between">
+    <div class="actions flex column align-center space-between">
         <button class="delete-btn" (click)="deleteContact()">Delete</button>
+        <button class="edit-btn" (click)="editContact()">Edit</button>
         <button class="go-back-btn btn" (click)="goBack()">Back</button>
     </div>
 </section>

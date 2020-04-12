@@ -1,7 +1,9 @@
 <section class="contact-list-container">
     <ul class="contact-list clean-list">
         <li *ngFor="let contact of contacts">
-            <contact-preview [contact]="contact"></contact-preview>
+            <a [routerLink]="['/contact',contact._id]" routerLinkActive="router-link-preview" >
+                <contact-preview [contact]="contact"></contact-preview>
+            </a>
         </li>
     </ul>
 </section>
