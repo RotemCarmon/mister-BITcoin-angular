@@ -1,14 +1,7 @@
 <section class="main-app main-layout">
-    <app-header class="app-header" (setPage)="togglePages($event)"></app-header>
-    <contact-page 
-        *ngIf="isShowing === 'contact'">
-    </contact-page>
-    <home-page
-        *ngIf="isShowing === 'home'">
-    </home-page>
-    <statistic-page
-        *ngIf="isShowing === 'statistic'">
-    </statistic-page>
-   
-    <router-outlet></router-outlet>
+    <app-header class="app-header"></app-header>   
+    <main class="main-view">
+        <router-outlet></router-outlet>
+    </main>
+    <app-footer class="app-footer"></app-footer>
 </section>

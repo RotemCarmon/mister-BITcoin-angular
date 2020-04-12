@@ -7,31 +7,33 @@ import { DatePipe } from '@angular/common';
 import { CurrencyPipe } from '@angular/common';
 
 import { AppComponent } from './app.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
+import { ContactPageComponent } from './pages/contact-page/contact-page.component';
+import { StatisticPageComponent } from './pages/statistic-page/statistic-page.component';
 import { ContactFilterComponent } from './cmps/contact-filter/contact-filter.component';
 import { ContactListComponent } from './cmps/contact-list/contact-list.component';
 import { ContactPreviewComponent } from './cmps/contact-preview/contact-preview.component';
 import { ContactDetailsComponent } from './pages/contact-details/contact-details.component';
 import { ContactEditComponent } from './pages/contact-edit/contact-edit.component';
-import { ContactPageComponent } from './pages/contact-page/contact-page.component';
-import { HomePageComponent } from './pages/home-page/home-page.component';
 import { AppHeaderComponent } from './cmps/app-header/app-header.component';
-import { StatisticPageComponent } from './pages/statistic-page/statistic-page.component';
 import { ChartComponent } from './cmps/chart/chart.component';
+import { AppFooterComponent } from './cmps/app-footer/app-footer.component';
 
 
 @NgModule({
   declarations: [
+    HomePageComponent,
+    ContactPageComponent,
+    StatisticPageComponent,
     AppComponent,
     ContactFilterComponent,
     ContactListComponent,
     ContactPreviewComponent,
     ContactDetailsComponent,
     ContactEditComponent,
-    ContactPageComponent,
-    HomePageComponent,
     AppHeaderComponent,
-    StatisticPageComponent,
     ChartComponent,
+    AppFooterComponent,
   ],
   imports: [
     BrowserModule,

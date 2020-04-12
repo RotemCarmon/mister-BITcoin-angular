@@ -1,7 +1,8 @@
 <section class="app-header-container flex justify-end">
-    <div class="navbar">
-        <button class="nav-btn" (click)="togglePages('home')">Home</button>
-        <button class="nav-btn" (click)="togglePages('contact')">Contacts</button>
-        <button class="nav-btn" (click)="togglePages('statistic')">Statistics</button>
+    <div class="navbar flex align-center">
+        <a routerLink = "home"      routerLinkActive="active" class="nav-btn" >Home       </a>
+        <a routerLink = "contact"   routerLinkActive="active" class="nav-btn" >Contacts   </a>
+        <a routerLink = "statistic" routerLinkActive="active" class="nav-btn" >Statistics </a>
     </div>
 </section>
+ 

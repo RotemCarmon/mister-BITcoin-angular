@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Observable, BehaviorSubject } from 'rxjs';
-import { of } from 'rxjs/observable/of'
+import { of } from 'rxjs'
 import { Contact }  from '../models/contact.model';
+// import 'rxjs/add/observable/throw'
 
 const CONTACTS = [
   {
@@ -130,11 +131,12 @@ export class ContactService {
   private _contacts: Contact[] = CONTACTS;
   private _contacts$ = new BehaviorSubject<Array<Contact>>([])
   public contacts$ = this._contacts$.asObservable()
-
+  
+  
   constructor() {
   }
-
-
+  
+  
   public loadContacts(filterBy = null): void {
     
     let contacts = this._contacts;
@@ -143,16 +145,13 @@ export class ContactService {
     }
     this._contacts$.next(this._sort(contacts))
   }
-
-
-  // public getContactById(id: string): Observable<Contact> {
-  public getContactById(id: string): Contact {
-    //mock the server work
-    const contact = this._contacts.find(contact => contact._id === id)
-
-    //return an observable
-    // return contact ? of(contact) : Observable.throw(`Contact id ${id} not found!`)
-    return contact;
+  
+  
+  // public getContactById(id: string): Contact {
+  public getContactById(id: string): Observable<Contact> {
+      //mock the server work
+      var contact = this._contacts.find(contact => contact._id === id)
+      return contact ? of(contact) : Observable.throw(`Contact id ${id} not found!`)
   }
 
   public deleteContact(id: string) {

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { User }  from '../models/user.model';
-import { of } from 'rxjs/observable/of'
+// import { of } from 'rxjs/observablez/of';
 import { Observable } from 'rxjs';
 
 const USERS = [

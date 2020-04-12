@@ -20,9 +20,9 @@
 
 .nav-btn {
     box-shadow:0 ;
-    padding: 2px;
-    transition: all .4s;
+    transition: all .8s;
     &:hover {
+        background-color: rgba(lightskyblue,0.1);
         box-shadow: inset 0 -3px 0 lightskyblue;
         cursor: pointer;
     }

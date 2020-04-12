@@ -6,13 +6,8 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./app-header.component.scss']
 })
 export class AppHeaderComponent implements OnInit {
-  @Output() setPage = new EventEmitter()
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  togglePages(page) {
-    this.setPage.emit(page)
   }
 }
