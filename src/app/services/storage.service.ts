@@ -11,7 +11,7 @@ export class StorageService {
   setStore(key :string, value: any) :void {
     localStorage.setItem(key,JSON.stringify(value))
   }
-  getStore(key :string) :Contact[] {
+  getStore(key :string) :Array<any> {
     return JSON.parse(localStorage.getItem(key))
   }
 

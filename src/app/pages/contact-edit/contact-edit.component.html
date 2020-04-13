@@ -16,9 +16,8 @@
              </p>
         </div>
         <div class="action-btns flex space-between">
-            <button type="submit" class="save-btn btn">Save</button>
+            <button type="submit" [disabled]="editForm.invalid" class="save-btn btn">Save</button>
             <button (click)="goBack() ; false" class="cancel-btn">Cancel</button>
-            <!-- <fa-icon [icon]="faCoffee"></fa-icon> -->
         </div>
     </form>
 </section>

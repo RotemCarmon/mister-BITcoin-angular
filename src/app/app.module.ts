@@ -19,6 +19,7 @@ import { ContactEditComponent } from './pages/contact-edit/contact-edit.componen
 import { AppHeaderComponent } from './cmps/app-header/app-header.component';
 import { AppFooterComponent } from './cmps/app-footer/app-footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SignupComponent } from './pages/signup/signup.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ContactEditComponent,
     AppHeaderComponent,
     AppFooterComponent,
+    SignupComponent,
   ],
   imports: [
     BrowserModule,

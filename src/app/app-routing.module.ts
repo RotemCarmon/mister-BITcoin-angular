@@ -6,14 +6,17 @@ import { ContactPageComponent } from './pages/contact-page/contact-page.componen
 import { StatisticPageComponent } from './pages/statistic-page/statistic-page.component';
 import { ContactDetailsComponent } from './pages/contact-details/contact-details.component';
 import { ContactEditComponent } from './pages/contact-edit/contact-edit.component';
+import { SignupComponent } from './pages/signup/signup.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: HomePageComponent },
+  { path: 'home', component: HomePageComponent, canActivate:[AuthGuard] },
   { path: 'contact', component: ContactPageComponent },
   { path: 'contact/edit', component: ContactEditComponent},
   { path: 'contact/:id', component: ContactDetailsComponent },
-  { path: 'statistic', component: StatisticPageComponent }
+  { path: 'statistic', component: StatisticPageComponent },
+  { path: 'signup', component: SignupComponent }
 ];
 
 @NgModule({

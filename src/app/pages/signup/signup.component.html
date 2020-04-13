@@ -1,0 +1,11 @@
+<section class="signup-container">
+    <form novalidate #form="ngForm" (ngSubmit)="onSubmit(form)" class="flex column align-center">
+        <div class="form-row flex column align-center" >
+            <label for="username">Please enter your name:</label>
+            <input type="text" required name="name" #name="ngModel" [(ngModel)]="username"  placeholder="Your name goes here...">
+            
+            <p [hidden]="name.untouched || name.valid" class="validation-error">Name is required</p>
+        </div>
+        <button type="submit" [disabled]="!form.valid" class="save-btn btn">Save</button>    
+    </form>
+</section>

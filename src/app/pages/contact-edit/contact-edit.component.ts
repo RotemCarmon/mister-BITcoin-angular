@@ -64,11 +64,8 @@ export class ContactEditComponent implements OnInit, OnDestroy {
 
  
 
-  onSubmit(): void {
-    console.log('Contact', !!this.contact);
-    
+  onSubmit(): void {    
     var newContact = (!!this.contact)? this._prepareContact(this.editForm.value) : this.editForm.value
-    console.log('Submit', newContact);
 
     this.contactService.saveContact(newContact);
     this.router.navigateByUrl('contact');

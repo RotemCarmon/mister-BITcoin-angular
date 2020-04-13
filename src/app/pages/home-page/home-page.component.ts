@@ -3,6 +3,7 @@ import { UserService } from 'src/app/services/user-service.service';
 import { User } from 'src/app/models/user.model';
 import { BitcoinService } from 'src/app/services/bitcoin-service.service';
 
+
 @Component({
   selector: 'home-page',
   templateUrl: './home-page.component.html',
@@ -12,6 +13,7 @@ export class HomePageComponent implements OnInit {
   user: User = null;
   rate: number;
   USD: number;
+
   constructor(
     private userService: UserService,
     private bitcoinService: BitcoinService

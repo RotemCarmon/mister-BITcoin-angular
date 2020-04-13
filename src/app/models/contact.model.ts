@@ -7,22 +7,22 @@ export class Contact {
         public email: string = '',
         ) {}
 
-    setId?() {
+    setId() {
         // Implement your own set Id
-        this._id = makeId() 
+        this._id = _makeId() 
     }
 }
 
-function makeId() : string {
+function _makeId() : string {
     var possibleChars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSWZ0123456789'
     var str = '';
     for(var i = 0 ; i < 25 ; i++ ) {
-        var int = randomInt(0, possibleChars.length)
+        var int = _randomInt(0, possibleChars.length)
         str += possibleChars.charAt(int)
     }
     return str 
 }
 
-function randomInt (min, max) :number{
+function _randomInt (min, max) :number{
     return Math.floor(Math.random() * ( max - min ) + min)
 }
