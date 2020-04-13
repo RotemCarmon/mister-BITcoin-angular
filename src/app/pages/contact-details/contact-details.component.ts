@@ -15,7 +15,7 @@ export class ContactDetailsComponent implements OnInit, OnDestroy {
   contactId: string;
   idSub: Subscription;
   contactSub: Subscription;
-  
+
   constructor(
     private contactService: ContactService,
     private router: Router,
@@ -48,10 +48,11 @@ export class ContactDetailsComponent implements OnInit, OnDestroy {
 
   deleteContact() {
     this.contactService.deleteContact(this.contactId);
+    console.log('in the details component');
     this.location.back();
   }
   editContact() {
-    this.router.navigate(['contact/edit', this.contactId]);
+    this.router.navigate(['contact/edit', { id: this.contactId }]);
   }
 
   ngOnDestroy(): void {

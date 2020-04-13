@@ -1,3 +1,11 @@
 .contact-page-container {
     padding: 15px;
+    h2 {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    a.add-contact-btn {
+        padding: 2px 7px;
+        height: 26px;
+    }
 }

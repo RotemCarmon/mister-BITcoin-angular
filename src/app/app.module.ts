@@ -5,6 +5,7 @@ import { GoogleChartsModule } from 'angular-google-charts';
 import { AppRoutingModule } from './app-routing.module';
 import { DatePipe } from '@angular/common';
 import { CurrencyPipe } from '@angular/common';
+import { StorageService } from "./services/storage.service";
 
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
@@ -17,6 +18,7 @@ import { ContactDetailsComponent } from './pages/contact-details/contact-details
 import { ContactEditComponent } from './pages/contact-edit/contact-edit.component';
 import { AppHeaderComponent } from './cmps/app-header/app-header.component';
 import { AppFooterComponent } from './cmps/app-footer/app-footer.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -38,11 +40,13 @@ import { AppFooterComponent } from './cmps/app-footer/app-footer.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    GoogleChartsModule.forRoot()
+    GoogleChartsModule.forRoot(),
+    FontAwesomeModule
   ],
   providers: [
     DatePipe,
-    CurrencyPipe
+    CurrencyPipe,
+    StorageService
   ],
   bootstrap: [AppComponent]
 })

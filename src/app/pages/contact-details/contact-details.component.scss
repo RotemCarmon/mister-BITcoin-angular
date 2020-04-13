@@ -12,7 +12,7 @@
         background-color: white;
         align-self: center;
     }
-    .delete-btn {
+    .delete-btn ,.edit-btn{
         text-decoration: underline;
 
         &:hover {

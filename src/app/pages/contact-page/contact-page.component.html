@@ -1,5 +1,9 @@
 <section class="contact-page-container">
-    <contact-filter (setFilterBy)="setFilterBy($event)" [filterBy]="filterBy"></contact-filter>
+    <h2>Contacts</h2>
+    <div class="list-header flex justify-center align-center">
+        <contact-filter (setFilterBy)="setFilterBy($event)" [filterBy]="filterBy"></contact-filter>
+        <a routerLink="edit" routerLinkActive="router-link-active" class="add-contact-btn btn">New +</a>
+    </div>
     <contact-list
         [contacts]="contacts">
     </contact-list>

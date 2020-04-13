@@ -2,9 +2,10 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { ContactService } from 'src/app/services/contact.service';
 import { Contact } from 'src/app/models/contact.model';
-import { Subscription } from 'rxjs';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Subscription, Observable } from 'rxjs';
+import { ActivatedRoute, Router, Params } from '@angular/router';
 import { Location } from '@angular/common';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'contact-edit',
@@ -17,6 +18,7 @@ export class ContactEditComponent implements OnInit, OnDestroy {
   idSub: Subscription;
   contactSub: Subscription;
   editForm: FormGroup;
+  faCoffee = faCoffee;
 
   constructor(
     private fb: FormBuilder,
@@ -27,9 +29,8 @@ export class ContactEditComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit(): void {
-    if (this.route.params) {
-      console.log('Params exict', this.route.params);
-      this.getParams();
+    this.getParams();
+    if (this.contactId) {
       this.getContactById();
     }
     this.setFormGroup();
@@ -58,21 +59,33 @@ export class ContactEditComponent implements OnInit, OnDestroy {
       .subscribe((contact) => {
         this.contact = contact;
       });
-    console.log('contact', this.contact);
+    this.contactSub.unsubscribe();
   }
 
-  onSubmit() {
-    console.log(this.editForm.value);
-    this.contactService.saveContact(this.editForm.value);
-    this.router.navigateByUrl('contact')
+ 
+
+  onSubmit(): void {
+    console.log('Contact', !!this.contact);
+    
+    var newContact = (!!this.contact)? this._prepareContact(this.editForm.value) : this.editForm.value
+    console.log('Submit', newContact);
+
+    this.contactService.saveContact(newContact);
+    this.router.navigateByUrl('contact');
   }
-  goBack() {
-    console.log('Going back');
+  
+  goBack(): void {
     this.location.back();
   }
 
   ngOnDestroy(): void {
     this.idSub.unsubscribe();
-    this.contactSub.unsubscribe();
+  }
+
+  _prepareContact(newContact: Contact): Contact {
+    this.contact.name = newContact.name;
+    this.contact.phone = newContact.phone;
+    this.contact.email = newContact.email;
+    return this.contact;
   }
 }
