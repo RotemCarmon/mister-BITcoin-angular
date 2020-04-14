@@ -16,5 +16,11 @@
         .filter-cmp {
             width: 100%;
         }
+        a.add-contact-btn {
+            display: flex;
+            align-items: center;
+            font-size: 1.3em;
+            height: 36px;
+        }
     }
 }

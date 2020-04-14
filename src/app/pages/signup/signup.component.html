@@ -4,7 +4,7 @@
             <label for="username">Please enter your name:</label>
             <input type="text" required name="name" #name="ngModel" [(ngModel)]="username"  placeholder="Your name goes here...">
             
-            <p [hidden]="name.untouched || name.valid" class="validation-error">Name is required</p>
+            <p [class.shown]="name.touched && name.invalid" class="validation-error">Name is required</p>
         </div>
         <button type="submit" [disabled]="!form.valid" class="save-btn btn">Save</button>    
     </form>

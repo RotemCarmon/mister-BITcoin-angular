@@ -19,6 +19,7 @@ export class TransferFundComponent implements OnInit {
   onTransferFund(): void {
     // console.log('Transfering..', this.amount);
     this.handleTransfer.emit(this.amount)
+    this.amount = null;
   }
   ngOnInit(): void {
   }
