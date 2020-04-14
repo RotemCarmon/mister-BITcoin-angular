@@ -1,19 +1,20 @@
 import { Component } from '@angular/core';
 import { UserService } from 'src/app/services/user-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'signup-page',
   templateUrl: './signup.component.html',
-  styleUrls: ['./signup.component.scss']
+  styleUrls: ['./signup.component.scss'],
 })
 export class SignupComponent {
-  username: string = ''
+  username: string = '';
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, private router: Router) {}
 
-  onSubmit (form) {
+  onSubmit(form) {
     console.log('submitted', form.value);
-    this.userService.signup(form.value)
+    this.userService.signup(form.value);
+    this.router.navigateByUrl('home')
   }
-
 }

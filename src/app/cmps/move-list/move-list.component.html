@@ -1,0 +1,8 @@
+
+<section class="move-list-container">
+    <ul class="move-list clean-list">
+        <li *ngFor="let move of moves">
+            <move-preview [move]="move" [general]="general"></move-preview>
+        </li>
+    </ul>
+</section>

@@ -6,10 +6,15 @@
         <h3>Name: {{contact.name}}</h3>
         <h3>Phone: {{contact.phone}}</h3>
         <h3>Email: {{contact.email}}</h3>
+        <transfer-fund [contact]="contact" [maxCoins]="currUser.coins" (handleTransfer)="handleTransfer($event)"></transfer-fund>
     </div>
     <div class="actions flex column align-center space-between">
         <button class="delete-btn" (click)="deleteContact()">Delete</button>
         <button class="edit-btn" (click)="editContact()">Edit</button>
         <button class="go-back-btn btn" (click)="goBack()">Back</button>
     </div>
+</section>
+<section class="contact-moves">
+    <h2 *ngIf="moves && moves.length">Moves you made to {{contact.name}}</h2>
+    <move-list [moves]="moves"></move-list>
 </section>

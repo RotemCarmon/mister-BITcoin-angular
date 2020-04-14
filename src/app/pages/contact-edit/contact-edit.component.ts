@@ -5,7 +5,7 @@ import { Contact } from 'src/app/models/contact.model';
 import { Subscription, Observable } from 'rxjs';
 import { ActivatedRoute, Router, Params } from '@angular/router';
 import { Location } from '@angular/common';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'contact-edit',
@@ -18,7 +18,6 @@ export class ContactEditComponent implements OnInit, OnDestroy {
   idSub: Subscription;
   contactSub: Subscription;
   editForm: FormGroup;
-  faCoffee = faCoffee;
 
   constructor(
     private fb: FormBuilder,

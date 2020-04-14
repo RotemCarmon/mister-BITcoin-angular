@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BitcoinService } from 'src/app/services/bitcoin-service.service';
 import { DatePipe } from '@angular/common';
-import { CurrencyPipe } from '@angular/common';
 
 @Component({
   selector: 'statistic-page',
@@ -41,7 +40,6 @@ export class StatisticPageComponent implements OnInit {
   constructor(
     private bitcoinService: BitcoinService,
     private datePipe: DatePipe,
-    private currencyPipe: CurrencyPipe
   ) {}
 
   ngOnInit(): void {
@@ -72,7 +70,6 @@ export class StatisticPageComponent implements OnInit {
     if (!tradeVolume) {
       const prm = await this.bitcoinService.getTradeVolume();
       tradeVolume = prm.data;
-      console.log('tradeVolume', tradeVolume);
       localStorage.setItem('tradeVolume', JSON.stringify(tradeVolume));
     }
     
@@ -91,7 +88,6 @@ export class StatisticPageComponent implements OnInit {
       if (!confirmedTransactions) {
         const prm = await this.bitcoinService.getConfirmedTransactions();
         confirmedTransactions = prm.data;
-        console.log('confirmedTransactions', confirmedTransactions);
         localStorage.setItem(
           'confirmedTransactions',
           JSON.stringify(confirmedTransactions)

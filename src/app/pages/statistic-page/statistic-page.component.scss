@@ -6,3 +6,13 @@
 .trade-volume, .confirm-transaction {
     width: 50%;
 }
+
+@media (max-width: 800px) {
+    .small-charts {
+        flex-direction: column;
+    }
+    .trade-volume, .confirm-transaction {
+        width: 100%;
+        height: 400px;
+    } 
+}

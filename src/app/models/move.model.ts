@@ -1,8 +1,8 @@
-export class move {
+export class Move {
   constructor(
-    toId: string,
-    to: string,
-    at: number = Date.now(),
-    amount: number
+    public toId: string,
+    public to: string,
+    public at: number = Date.now(),
+    public amount: number
   ) {}
 }

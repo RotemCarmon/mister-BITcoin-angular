@@ -4,8 +4,7 @@
     width: 100%;
     padding: 30px;
     font-size: 1.25em;
-    margin: auto;
-    margin-top: 30px;
+    margin: 30px auto;
     .contact-img {
         width: 180px;
         border-radius: 50%;
@@ -14,9 +13,45 @@
     }
     .delete-btn ,.edit-btn{
         text-decoration: underline;
-
+        
         &:hover {
             cursor: pointer;
+        }
+    }
+    
+}
+
+@media (max-width: 760px) {
+    .contact-details-container {
+        font-size: 1em;
+        .contact-img {
+            width: 125px;
+        }
+    }
+}
+@media (max-width: 600px) {
+    .contact-details-container {
+        flex-direction: column;
+        align-items: flex-start;
+
+        >*:not(:last-child){
+            margin-bottom: 20px;
+        }
+        .contact-img {
+            width: 125px;
+            align-self: flex-start;
+        }
+        .contact-info {
+            width: 100%;
+            h3 {
+                margin-bottom: 20px;
+            }
+        }
+        .actions {
+            width: 100%;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: baseline;
         }
     }
 }

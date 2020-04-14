@@ -4,16 +4,17 @@
       <h1>Mr<span class="logo-dot">.</span>BITCoin</h1>
     </a>
   </div>
-  <div class="navbar flex align-center">
-    <a routerLink="home" routerLinkActive="active" class="nav-btn">Home</a>
-    <a routerLink="contact" routerLinkActive="active" class="nav-btn"
+  <div class="navbar flex align-center " [class.shown]="isShowNavbar">
+    <a routerLink="home" (click)="toggleNavbar()" routerLinkActive="active" class="nav-btn">Home</a>
+    <a routerLink="contact" (click)="toggleNavbar()" routerLinkActive="active" class="nav-btn"
       >Contacts
     </a>
-    <a routerLink="statistic" routerLinkActive="active" class="nav-btn"
+    <a routerLink="statistic" (click)="toggleNavbar()" routerLinkActive="active" class="nav-btn"
       >Statistics
     </a>
-    <a routerLink="signup" routerLinkActive="active" class="nav-btn"
+    <a routerLink="signup" (click)="toggleNavbar()" routerLinkActive="active" class="nav-btn"
       >Sign Up
     </a>
   </div>
+  <div class="hamburger" *ngIf="!isShowNavbar" (click)="toggleNavbar()" ><fa-icon [icon]="faBars" size="2x"></fa-icon></div>
 </section>

@@ -9,3 +9,12 @@
         height: 26px;
     }
 }
+
+@media (max-width: 500px) {
+    .contact-page-container {
+
+        .filter-cmp {
+            width: 100%;
+        }
+    }
+}

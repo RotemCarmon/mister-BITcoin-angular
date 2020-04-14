@@ -1,0 +1,10 @@
+<section class="transfer-fund-container flex align-center">
+  <input type="number" [(ngModel)]="amount" placeholder="Amount" />
+  <button
+    (click)="onTransferFund()"
+    class="transfer-btn btn"
+    [disabled]="!amount || amount === 0 || amount > maxCoins"
+  >
+    Transfer
+  </button>
+</section>

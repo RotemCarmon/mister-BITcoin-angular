@@ -16,3 +16,13 @@ text-align: center;
         }
     }
 }
+
+@media (max-width: 500px) {
+    .contact-filter { 
+        
+        flex-grow: 1;
+        input {
+            width: 100%;
+        }
+    }
+}

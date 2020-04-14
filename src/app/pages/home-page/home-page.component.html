@@ -1,15 +1,41 @@
-<section class="home-page-container">
-    <h2>Hello {{user.name}}!</h2>
-    <div class="coins flex align-center">
-        <img src="../../../assets/img/coins.png" alt="">
-        <h3>Coins: {{user.coins}}</h3>
-    </div>
-    <div class="bitRate flex align-center">
-        <img src="../../../assets/img/bitcoin_icon.png" alt="">
-        <h3>BTC: {{rate}}</h3>
-    </div>
-    <div class="balance flex align-center">
-        <img src="../../../assets/img/usd.png" alt="">
-        <h3>Balance: {{USD | currency: 'USD'}}</h3>
-    </div>
+<section class="home-page-container flex">
+    <section class="user-info-container">
+        <section class="user-info">
+            <div class="user flex align-center">
+                <div class="user-img ratio-square">
+                    <img src="https://robohash.org/{{user._id}}" alt="Profile picture">
+                </div>
+                <h2>Hello {{user.name}}!</h2>
+            </div>
+            <div class="coins flex align-center">
+                <img class="icon" src="../../../assets/img/coins.png" alt="">
+                <h3>Coins: {{user.coins}}</h3>
+            </div>
+            <div class="bitRate flex align-center">
+                <img class="icon" src="../../../assets/img/bitcoin_icon.png" alt="">
+                <h3>BTC: {{rate}}</h3>
+            </div>
+            <div class="balance flex align-center">
+                <img class="icon" src="../../../assets/img/usd.png" alt="">
+                <h3>Balance: {{USD | currency: 'USD'}}</h3>
+            </div>
+        </section>
+        <div class="chart">
+            <google-chart
+                class="chart moves-history"
+                [type]="movesChart.type"
+                [data]="movesChart.data"
+                [title]="movesChart.title"
+                [options]="movesChart.options"
+                [dynamicResize]="true"
+            ></google-chart>
+        </div>
+    </section>
+    <section class="user-moves">
+        <h2 *ngIf="movesToShow && movesToShow.length; else noMoves">Your last {{movesToShow.length}} moves</h2>
+            <ng-template #noMoves>
+                <h2>You made no moves yet</h2>
+            </ng-template>
+        <move-list [moves]="movesToShow" [general]="general"></move-list>
+    </section>
 </section>

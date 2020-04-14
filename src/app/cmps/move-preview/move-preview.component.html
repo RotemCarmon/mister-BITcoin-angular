@@ -1,0 +1,14 @@
+<section class="move-preview-container" *ngIf="move">
+<div class="move-to" *ngIf="general">
+    <label>To </label>
+    {{move.to}}
+</div>
+<div class="move-amount">
+    <label>Amount:</label>
+    {{move.amount}}
+    coins
+</div>
+<div class="move-at">
+    {{move.at | date : 'MMM d, y, h:mm a'}}
+</div>
+</section>

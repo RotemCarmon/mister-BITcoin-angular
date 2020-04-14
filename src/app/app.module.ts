@@ -20,6 +20,9 @@ import { AppHeaderComponent } from './cmps/app-header/app-header.component';
 import { AppFooterComponent } from './cmps/app-footer/app-footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SignupComponent } from './pages/signup/signup.component';
+import { TransferFundComponent } from './cmps/transfer-fund/transfer-fund.component';
+import { MoveListComponent } from './cmps/move-list/move-list.component';
+import { MovePreviewComponent } from './cmps/move-preview/move-preview.component';
 
 
 @NgModule({
@@ -36,6 +39,9 @@ import { SignupComponent } from './pages/signup/signup.component';
     AppHeaderComponent,
     AppFooterComponent,
     SignupComponent,
+    TransferFundComponent,
+    MoveListComponent,
+    MovePreviewComponent,
   ],
   imports: [
     BrowserModule,
