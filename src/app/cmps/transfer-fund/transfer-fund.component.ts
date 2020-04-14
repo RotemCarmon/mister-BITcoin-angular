@@ -17,7 +17,6 @@ export class TransferFundComponent implements OnInit {
   constructor() { }
 
   onTransferFund(): void {
-    // console.log('Transfering..', this.amount);
     this.handleTransfer.emit(this.amount)
     this.showUserMsg()
     this.amount = null;

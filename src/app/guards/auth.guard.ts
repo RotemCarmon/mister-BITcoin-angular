@@ -19,10 +19,8 @@ export class AuthGuard implements CanActivate, CanDeactivate<unknown> {
   canActivate() {
     const user = this.userService.getUser()
     if(user){
-      console.log('You are logged in as', user);   
       return true 
     } else {
-      console.log('No user avaliable, please sign up');
       this.router.navigateByUrl('signup');
       return false
     }

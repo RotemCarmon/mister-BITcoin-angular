@@ -13,7 +13,6 @@ export class SignupComponent {
   constructor(private userService: UserService, private router: Router) {}
 
   onSubmit(form) {
-    console.log('submitted', form.value);
     this.userService.signup(form.value);
     this.router.navigateByUrl('home')
   }

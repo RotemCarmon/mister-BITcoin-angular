@@ -64,7 +64,6 @@ export class ContactDetailsComponent implements OnInit, OnDestroy {
 
   deleteContact(): void {
     this.contactService.deleteContact(this.contactId);
-    console.log('in the details component');
     this.location.back();
   }
   editContact(): void {

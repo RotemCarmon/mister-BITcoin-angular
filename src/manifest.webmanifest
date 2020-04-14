@@ -1,7 +1,7 @@
 {
-  "name": "mister-BITcoin",
-  "short_name": "mister-BITcoin",
-  "theme_color": "#1976d2",
+  "name": "Mr. BITCoin",
+  "short_name": "Mr. BITCoin",
+  "theme_color": "#272751",
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "./",
