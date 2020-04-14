@@ -20,7 +20,7 @@
                 <h3>Balance: {{USD | currency: 'USD'}}</h3>
             </div>
         </section>
-        <div class="chart">
+        <div class="chart" *ngIf="this.user.moves.length">
             <google-chart
                 class="chart moves-history"
                 [type]="movesChart.type"

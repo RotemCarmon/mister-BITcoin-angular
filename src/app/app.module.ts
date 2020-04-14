@@ -23,6 +23,8 @@ import { SignupComponent } from './pages/signup/signup.component';
 import { TransferFundComponent } from './cmps/transfer-fund/transfer-fund.component';
 import { MoveListComponent } from './cmps/move-list/move-list.component';
 import { MovePreviewComponent } from './cmps/move-preview/move-preview.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 
 @NgModule({
@@ -49,7 +51,8 @@ import { MovePreviewComponent } from './cmps/move-preview/move-preview.component
     FormsModule,
     ReactiveFormsModule,
     GoogleChartsModule.forRoot(),
-    FontAwesomeModule
+    FontAwesomeModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
     DatePipe,

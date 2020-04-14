@@ -11,16 +11,26 @@ import { Contact } from 'src/app/models/contact.model';
 export class TransferFundComponent implements OnInit {
   @Input() contact: Contact;
   @Input() maxCoins: number;
-  // maxCoins: number;
   @Output() handleTransfer = new EventEmitter();
   amount: number;
+  userMsg: string = null;
   constructor() { }
 
   onTransferFund(): void {
     // console.log('Transfering..', this.amount);
     this.handleTransfer.emit(this.amount)
+    this.showUserMsg()
     this.amount = null;
   }
+  
+  showUserMsg (): void {
+    this.userMsg = `You transferred ${this.amount} coins`
+    setTimeout(() => {
+      this.userMsg = null;
+    }, 3000);
+  }
+
+
   ngOnInit(): void {
   }
 

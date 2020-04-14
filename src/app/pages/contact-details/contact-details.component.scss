@@ -11,12 +11,19 @@
         background-color: white;
         align-self: center;
     }
-    .delete-btn ,.edit-btn{
-        text-decoration: underline;
-        
-        &:hover {
-            cursor: pointer;
+    .actions {
+        padding: 5px 0;
+        > *{
+            &:hover {
+                cursor: pointer;
+            }
         }
+    }
+    .actions.desk {
+        display: flex;
+    }
+    .actions.mobile {
+        display: none;
     }
     
 }
@@ -47,11 +54,12 @@
                 margin-bottom: 20px;
             }
         }
-        .actions {
+        .actions.desk {
+            display: none;
+        }
+        .actions.mobile {
             width: 100%;
-            flex-direction: row-reverse;
-            justify-content: space-between;
-            align-items: baseline;
+            display: flex;
         }
     }
 }

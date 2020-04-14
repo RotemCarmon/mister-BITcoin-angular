@@ -7,6 +7,7 @@ import { Location } from '@angular/common';
 import { UserService } from 'src/app/services/user-service.service';
 import { User } from 'src/app/models/user.model';
 import { Move } from 'src/app/models/move.model';
+import { faEdit, faTrash, faArrowCircleLeft } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'contact-details',
@@ -19,7 +20,11 @@ export class ContactDetailsComponent implements OnInit, OnDestroy {
   idSub: Subscription;
   contactSub: Subscription;
   currUser: User;
-  moves: Move[]
+  moves: Move[];
+  faEdit = faEdit;
+  faTrash = faTrash;
+  faArrowCircleLeft = faArrowCircleLeft;
+
 
   constructor(
     private contactService: ContactService,
@@ -67,9 +72,7 @@ export class ContactDetailsComponent implements OnInit, OnDestroy {
   }
 
   handleTransfer(amount: number): void {
-    console.log('Fund Transfering...');
     this.userService.addMove(this.contact, amount)
-    console.log('Fund Tranfered successfully!!...');
   }
 
   getMoves(){
