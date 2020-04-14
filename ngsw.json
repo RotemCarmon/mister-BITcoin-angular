@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1586887708211,
+  "timestamp": 1586889908839,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -13,11 +13,14 @@
         "/main-es2015.59740ebf7a53be7fdb72.js",
         "/main-es5.59740ebf7a53be7fdb72.js",
         "/manifest.webmanifest",
+        "/ngsw-worker.js",
         "/polyfills-es2015.bbb42ff2e1c488ff52d5.js",
         "/polyfills-es5.0e4e1968447fab48e788.js",
         "/runtime-es2015.c9afb3256f2870e161de.js",
         "/runtime-es5.c9afb3256f2870e161de.js",
-        "/styles.f98c24277a3521ce2817.css"
+        "/safety-worker.js",
+        "/styles.f98c24277a3521ce2817.css",
+        "/worker-basic.min.js"
       ],
       "patterns": []
     },
@@ -60,16 +63,19 @@
     "/assets/img/bitcoin_icon.png": "df1415d1a219270d1a275962fd2bf5c5350ed84f",
     "/assets/img/coins.png": "adb8610fcd5594a15f1ee57c1754e41f84b8b14b",
     "/assets/img/usd.png": "4504d358fa0811bf5c8e4e5d39c69a5542eeae0e",
-    "/favicon.ico": "90cd254f5b15729d8cb882a4377135ba50f5dc67",
+    "/favicon.ico": "f4ba857b014c5cc9b3c9548da8ed4aac3ba33904",
     "/index.html": "7908cd5d8c83a24cffaa7061e9998b989a428e7d",
     "/main-es2015.59740ebf7a53be7fdb72.js": "5ecccc86323688cce26af53d107b64cf6cc546ae",
     "/main-es5.59740ebf7a53be7fdb72.js": "6685314a32dd4a3420bdd977645599cb52b11d1e",
-    "/manifest.webmanifest": "93ecf4e83880aceaee31ab7d131618ba78d4eb59",
+    "/manifest.webmanifest": "477c45b7f2f7f7d25e58cf777f70a88e27bc63a4",
+    "/ngsw-worker.js": "56c42f041be8a028841dbb1b7781d63ddce18baa",
     "/polyfills-es2015.bbb42ff2e1c488ff52d5.js": "72ad4ccc0a3916ae4598199447cdeadd6d380570",
     "/polyfills-es5.0e4e1968447fab48e788.js": "e51a1de4f016cd689dbdbef51043dec9518c4111",
     "/runtime-es2015.c9afb3256f2870e161de.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
     "/runtime-es5.c9afb3256f2870e161de.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
-    "/styles.f98c24277a3521ce2817.css": "0bf89aa35f9fcf13d7a9d4349639c7f46ed3d5b1"
+    "/safety-worker.js": "ae5c8be3955e38edeeec09ed94b63d1e57f003c9",
+    "/styles.f98c24277a3521ce2817.css": "0bf89aa35f9fcf13d7a9d4349639c7f46ed3d5b1",
+    "/worker-basic.min.js": "ae5c8be3955e38edeeec09ed94b63d1e57f003c9"
   },
   "navigationUrls": [
     {
