@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1586878899818,
+  "timestamp": 1586883244985,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -10,8 +10,8 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/main-es2015.a8cf1c3fa06484ef338c.js",
-        "/main-es5.a8cf1c3fa06484ef338c.js",
+        "/main-es2015.a1df250c14fdeb9f745d.js",
+        "/main-es5.a1df250c14fdeb9f745d.js",
         "/manifest.webmanifest",
         "/polyfills-es2015.bbb42ff2e1c488ff52d5.js",
         "/polyfills-es5.0e4e1968447fab48e788.js",
@@ -61,9 +61,9 @@
     "/assets/img/coins.png": "adb8610fcd5594a15f1ee57c1754e41f84b8b14b",
     "/assets/img/usd.png": "4504d358fa0811bf5c8e4e5d39c69a5542eeae0e",
     "/favicon.ico": "90cd254f5b15729d8cb882a4377135ba50f5dc67",
-    "/index.html": "f7b4476efd55a09b25cb7bce69dad3b2c6920f10",
-    "/main-es2015.a8cf1c3fa06484ef338c.js": "f09516e08928a124dbe8389fef7cce82f4faddc0",
-    "/main-es5.a8cf1c3fa06484ef338c.js": "8e49323dfeec2edf1cfe5a6d963fe95ca6c4a003",
+    "/index.html": "8226c7364551a725698f72421d38234d97013810",
+    "/main-es2015.a1df250c14fdeb9f745d.js": "bab35e9aabd8474538a1fde2d7558da394e0afe1",
+    "/main-es5.a1df250c14fdeb9f745d.js": "8c6b7471f8c196ad49a30c0a6688772828e1e574",
     "/manifest.webmanifest": "eb05c7249920937e354715bb5fe75cd699a39c0a",
     "/polyfills-es2015.bbb42ff2e1c488ff52d5.js": "72ad4ccc0a3916ae4598199447cdeadd6d380570",
     "/polyfills-es5.0e4e1968447fab48e788.js": "e51a1de4f016cd689dbdbef51043dec9518c4111",
