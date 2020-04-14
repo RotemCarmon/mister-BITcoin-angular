@@ -7,7 +7,7 @@ import { Location } from '@angular/common';
 import { UserService } from 'src/app/services/user-service.service';
 import { User } from 'src/app/models/user.model';
 import { Move } from 'src/app/models/move.model';
-import { faEdit, faTrash, faArrowCircleLeft } from '@fortawesome/free-solid-svg-icons';
+import { faEdit, faTrash, faArrowCircleLeft, faEllipsisV } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'contact-details',
@@ -24,7 +24,8 @@ export class ContactDetailsComponent implements OnInit, OnDestroy {
   faEdit = faEdit;
   faTrash = faTrash;
   faArrowCircleLeft = faArrowCircleLeft;
-
+  faEllipsisV = faEllipsisV;
+  actionBtns = false;
 
   constructor(
     private contactService: ContactService,
@@ -40,6 +41,13 @@ export class ContactDetailsComponent implements OnInit, OnDestroy {
     this.getUser();
     this.getMoves();
   }
+
+  toggleActionBtns(ev) {
+    ev.stopPropagation();
+    this.actionBtns = !this.actionBtns;
+  }
+
+
   getUser(): void {
     this.currUser = this.userService.getUser();
   }

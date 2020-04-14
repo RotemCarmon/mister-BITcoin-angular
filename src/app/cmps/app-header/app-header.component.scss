@@ -55,12 +55,21 @@
     }
     &.shown {
         transform: translateX(0);
-        box-shadow: -5px 5px 5px 1000px #000000a1;
+        // box-shadow: -5px 5px 5px 1000px #000000a1;
       }
     }
     .hamburger {
       display: initial;
         margin-right: 20px;
+    }
+    .dark-screen {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: #000000a1;
+      z-index: 99;
     }
   }
 }

@@ -1,4 +1,4 @@
-<section class="contact-details-container flex space-between">
+<section (click)="actionBtns = false" class="contact-details-container flex space-between">
     <div class="contact-img ratio-square">
         <img src="https://robohash.org/{{contact._id}}" alt="">
     </div>
@@ -8,15 +8,13 @@
         <h3>Email: {{contact.email}}</h3>
         <transfer-fund [contact]="contact" [maxCoins]="currUser.coins" (handleTransfer)="handleTransfer($event)"></transfer-fund>
     </div>
-    <div class="actions desk flex column align-center space-between">
-        <button class="go-back-btn" (click)="goBack()" title="Back"><fa-icon  [icon]="faArrowCircleLeft"></fa-icon></button>
-        <button class="edit-btn" (click)="editContact()" title="Edit"><fa-icon [icon]="faEdit"></fa-icon></button>
-        <button class="delete-btn" (click)="deleteContact()" title="Delete"><fa-icon [icon]="faTrash"></fa-icon></button>
-    </div>
-    <div class="actions mobile flex row-reverse align-baseline space-between">
-        <button class="go-back-btn" (click)="goBack()" title="Back"><fa-icon  [icon]="faArrowCircleLeft" size='2x'></fa-icon></button>
-        <button class="edit-btn" (click)="editContact()" title="Edit"><fa-icon [icon]="faEdit" size='2x'></fa-icon></button>
-        <button class="delete-btn" (click)="deleteContact()" title="Delete"><fa-icon [icon]="faTrash" size='2x'></fa-icon></button>
+    <div class="actions flex ">
+        <fa-icon (click)="toggleActionBtns($event)" class="dots" [class.deactive]="actionBtns" [icon]="faEllipsisV"></fa-icon>
+        <div class="collapse-action-btns flex column align-center space-between" [class.active]="actionBtns">
+            <button class="go-back-btn" (click)="goBack()" title="Back"><fa-icon [icon]="faArrowCircleLeft"></fa-icon></button>
+            <button class="edit-btn" (click)="editContact()" title="Edit"><fa-icon [icon]="faEdit"></fa-icon></button>
+            <button class="delete-btn" (click)="deleteContact()" title="Delete"><fa-icon [icon]="faTrash"></fa-icon></button>
+        </div>
     </div>
 </section>
 <section class="contact-moves">
