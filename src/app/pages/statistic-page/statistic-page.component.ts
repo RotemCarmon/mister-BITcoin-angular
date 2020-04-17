@@ -42,12 +42,10 @@ export class StatisticPageComponent implements OnInit {
     private datePipe: DatePipe,
   ) {}
 
-  ngOnInit(): void {
-    setTimeout(() => {   
+  ngOnInit(): void { 
       this.getMarketPrice();
       this.getTradeVolume();
       this.getConfirmedTransactions();
-    }, 2000);
   }
 
   async getMarketPrice() {
