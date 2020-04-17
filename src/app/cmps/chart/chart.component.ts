@@ -9,7 +9,9 @@ import { DatePipe } from '@angular/common';
 })
 export class ChartComponent implements OnInit {
   @Input() user: User
-  chartData: any;
+  chartData: any = { 
+
+  }
 
   constructor(
     private datePipe: DatePipe
@@ -22,10 +24,10 @@ export class ChartComponent implements OnInit {
      
     const chart = {
       type: 'LineChart',
-      data: this.user.moves.map<Array<any>>((move) => {
+      data:(this.user.moves.length) ? this.user.moves.map<Array<any>>((move) => {
         var at = this.datePipe.transform(move.at , 'MMM d, y')
         return [at, move.amount]
-      }),
+      }) : [[Date.now(),0]],
       title: 'Moves history',
       options: {
         legend: { position: 'none' },
