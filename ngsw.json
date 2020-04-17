@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1587133300044,
+  "timestamp": 1587135899491,
   "index": "https://rotemcarmon.github.io/mister-BITcoin/index.html",
   "assetGroups": [
     {
@@ -10,8 +10,8 @@
       "urls": [
         "https://rotemcarmon.github.io/mister-BITcoin/favicon.ico",
         "https://rotemcarmon.github.io/mister-BITcoin/index.html",
-        "https://rotemcarmon.github.io/mister-BITcoin/main-es2015.56fa80187e44e54ac59b.js",
-        "https://rotemcarmon.github.io/mister-BITcoin/main-es5.56fa80187e44e54ac59b.js",
+        "https://rotemcarmon.github.io/mister-BITcoin/main-es2015.c7b90b247a50846f4fd7.js",
+        "https://rotemcarmon.github.io/mister-BITcoin/main-es5.c7b90b247a50846f4fd7.js",
         "https://rotemcarmon.github.io/mister-BITcoin/manifest.webmanifest",
         "https://rotemcarmon.github.io/mister-BITcoin/polyfills-es2015.bbb42ff2e1c488ff52d5.js",
         "https://rotemcarmon.github.io/mister-BITcoin/polyfills-es5.0e4e1968447fab48e788.js",
@@ -67,9 +67,9 @@
     "https://rotemcarmon.github.io/mister-BITcoin/assets/load/Spinner-1s-143px.gif": "a57b4904f55174b746446116aa7955370f8a6e54",
     "https://rotemcarmon.github.io/mister-BITcoin/assets/load/Spinner-1s-143px.svg": "0627ad667334073c8e8aa6812668ff4892fd605f",
     "https://rotemcarmon.github.io/mister-BITcoin/favicon.ico": "f4ba857b014c5cc9b3c9548da8ed4aac3ba33904",
-    "https://rotemcarmon.github.io/mister-BITcoin/index.html": "fc0dc724db8702826d6e1b8ecf22313669aaf974",
-    "https://rotemcarmon.github.io/mister-BITcoin/main-es2015.56fa80187e44e54ac59b.js": "10c7425397805939aecd6e39cfc37322150b807d",
-    "https://rotemcarmon.github.io/mister-BITcoin/main-es5.56fa80187e44e54ac59b.js": "7abfe4a9b82f097c7df980b62484a9cefa0d77c8",
+    "https://rotemcarmon.github.io/mister-BITcoin/index.html": "9fe6ec56376bb38af21f7a41151013619b492fc3",
+    "https://rotemcarmon.github.io/mister-BITcoin/main-es2015.c7b90b247a50846f4fd7.js": "d5751b88d0bff6ebbf21d6e0bc279d018d2db1cd",
+    "https://rotemcarmon.github.io/mister-BITcoin/main-es5.c7b90b247a50846f4fd7.js": "986808851b73be3344b7dd14abd19e46090280bc",
     "https://rotemcarmon.github.io/mister-BITcoin/manifest.webmanifest": "ad87e22b333958def9b669bc7837a5a656c59c8a",
     "https://rotemcarmon.github.io/mister-BITcoin/polyfills-es2015.bbb42ff2e1c488ff52d5.js": "72ad4ccc0a3916ae4598199447cdeadd6d380570",
     "https://rotemcarmon.github.io/mister-BITcoin/polyfills-es5.0e4e1968447fab48e788.js": "e51a1de4f016cd689dbdbef51043dec9518c4111",
