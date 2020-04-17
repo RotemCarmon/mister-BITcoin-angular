@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1587129595626,
+  "timestamp": 1587132229396,
   "index": "https://rotemcarmon.github.io/mister-BITcoin/index.html",
   "assetGroups": [
     {
@@ -10,8 +10,8 @@
       "urls": [
         "https://rotemcarmon.github.io/mister-BITcoin/favicon.ico",
         "https://rotemcarmon.github.io/mister-BITcoin/index.html",
-        "https://rotemcarmon.github.io/mister-BITcoin/main-es2015.4c73d7549a2f009ffc07.js",
-        "https://rotemcarmon.github.io/mister-BITcoin/main-es5.4c73d7549a2f009ffc07.js",
+        "https://rotemcarmon.github.io/mister-BITcoin/main-es2015.f66a329e4f84f728b48e.js",
+        "https://rotemcarmon.github.io/mister-BITcoin/main-es5.f66a329e4f84f728b48e.js",
         "https://rotemcarmon.github.io/mister-BITcoin/manifest.webmanifest",
         "https://rotemcarmon.github.io/mister-BITcoin/polyfills-es2015.bbb42ff2e1c488ff52d5.js",
         "https://rotemcarmon.github.io/mister-BITcoin/polyfills-es5.0e4e1968447fab48e788.js",
@@ -39,7 +39,10 @@
         "https://rotemcarmon.github.io/mister-BITcoin/assets/icons/icon-96x96.png",
         "https://rotemcarmon.github.io/mister-BITcoin/assets/img/bitcoin_icon.png",
         "https://rotemcarmon.github.io/mister-BITcoin/assets/img/coins.png",
-        "https://rotemcarmon.github.io/mister-BITcoin/assets/img/usd.png"
+        "https://rotemcarmon.github.io/mister-BITcoin/assets/img/usd.png",
+        "https://rotemcarmon.github.io/mister-BITcoin/assets/load/Blocks-1s-200px.gif",
+        "https://rotemcarmon.github.io/mister-BITcoin/assets/load/Spinner-1s-143px.gif",
+        "https://rotemcarmon.github.io/mister-BITcoin/assets/load/Spinner-1s-143px.svg"
       ],
       "patterns": []
     }
@@ -60,10 +63,13 @@
     "https://rotemcarmon.github.io/mister-BITcoin/assets/img/bitcoin_icon.png": "df1415d1a219270d1a275962fd2bf5c5350ed84f",
     "https://rotemcarmon.github.io/mister-BITcoin/assets/img/coins.png": "adb8610fcd5594a15f1ee57c1754e41f84b8b14b",
     "https://rotemcarmon.github.io/mister-BITcoin/assets/img/usd.png": "4504d358fa0811bf5c8e4e5d39c69a5542eeae0e",
+    "https://rotemcarmon.github.io/mister-BITcoin/assets/load/Blocks-1s-200px.gif": "fb49ff7eb9299da3e29f7b3238a08d61d4dca30b",
+    "https://rotemcarmon.github.io/mister-BITcoin/assets/load/Spinner-1s-143px.gif": "a57b4904f55174b746446116aa7955370f8a6e54",
+    "https://rotemcarmon.github.io/mister-BITcoin/assets/load/Spinner-1s-143px.svg": "0627ad667334073c8e8aa6812668ff4892fd605f",
     "https://rotemcarmon.github.io/mister-BITcoin/favicon.ico": "f4ba857b014c5cc9b3c9548da8ed4aac3ba33904",
-    "https://rotemcarmon.github.io/mister-BITcoin/index.html": "6968494489ec089b7f9d56427e04936d14fd2be5",
-    "https://rotemcarmon.github.io/mister-BITcoin/main-es2015.4c73d7549a2f009ffc07.js": "cc942d3c942262d44b02f08da4c9b7f42d3f7565",
-    "https://rotemcarmon.github.io/mister-BITcoin/main-es5.4c73d7549a2f009ffc07.js": "846febdb3dc19577fe751e7bd4a361c6cd55ba80",
+    "https://rotemcarmon.github.io/mister-BITcoin/index.html": "5b157441fe31cb9f8db17629363531149c23d050",
+    "https://rotemcarmon.github.io/mister-BITcoin/main-es2015.f66a329e4f84f728b48e.js": "2350fc69a868bfb1086efc8085776f99ec683776",
+    "https://rotemcarmon.github.io/mister-BITcoin/main-es5.f66a329e4f84f728b48e.js": "57759d8e7cb148c47408c1e68e32c0e339e887db",
     "https://rotemcarmon.github.io/mister-BITcoin/manifest.webmanifest": "ad87e22b333958def9b669bc7837a5a656c59c8a",
     "https://rotemcarmon.github.io/mister-BITcoin/polyfills-es2015.bbb42ff2e1c488ff52d5.js": "72ad4ccc0a3916ae4598199447cdeadd6d380570",
     "https://rotemcarmon.github.io/mister-BITcoin/polyfills-es5.0e4e1968447fab48e788.js": "e51a1de4f016cd689dbdbef51043dec9518c4111",
