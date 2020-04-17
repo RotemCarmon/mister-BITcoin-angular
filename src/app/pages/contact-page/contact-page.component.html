@@ -1,6 +1,6 @@
 <section class="contact-page-container">
     <h2>Contacts</h2>
-    <a routerLink="edit" routerLinkActive="router-link-active" class="add-contact-btn flex align-center justify-center btn"><fa-icon [icon]="faPlus"></fa-icon></a>
+    <a routerLink="edit" routerLinkActive="router-link-active" class="add-contact-btn flex align-center justify-center btn"><fa-icon [icon]="faUserPlus"></fa-icon></a>
     <contact-filter class="filter-cmp" (setFilterBy)="setFilterBy($event)" [filterBy]="filterBy"></contact-filter>
     <contact-list
         [contacts]="contacts">

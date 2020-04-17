@@ -3,17 +3,20 @@
         <div class="form-row">
             <input type="text" formControlName="name" class="name" placeholder="Enter Full Name">
             <p class="validation-error" [class.is-requierd]="editForm.get('name').invalid && editForm.get('name').dirty">
-               Name is required
+                Name is required
             </p>
+            <fa-icon [icon]="faUser"></fa-icon>
         </div>
         <div class="form-row">
             <input type="text" formControlName="phone" class="phone" placeholder="Phone Number">
+            <fa-icon [icon]="faPhone"></fa-icon>
         </div>
         <div class="form-row">
             <input type="email" formControlName="email" class="email" placeholder="Email">
             <p class="validation-error" [class.is-requierd]="editForm.get('email').invalid && editForm.get('email').dirty">
                 Email is required
-             </p>
+            </p>
+            <fa-icon [icon]="faEnvelope"></fa-icon>
         </div>
         <div class="action-btns flex space-between">
             <button type="submit" [disabled]="editForm.invalid" class="save-btn btn">Save</button>
