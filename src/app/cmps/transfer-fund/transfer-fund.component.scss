@@ -7,7 +7,7 @@
     }
     .transfer-msg {
         position: absolute;
-        background-color: rgba(255, 255, 255, 0.8);
+        background-color: rgba(255, 255, 255, 0.7);
         color: #E88C30;
         padding:10px 0;
         text-align: center;
@@ -18,6 +18,9 @@
         left: 50%;
         transform: translateX(-50%);
     }
-
+    
+    .transfer-msg.insufficient {
+        color: red;
+    }
 
 }

@@ -3,11 +3,11 @@
   <button
   (click)="onTransferFund()"
   class="transfer-btn btn"
-  [disabled]="!amount || amount === 0 || amount > maxCoins"
+  [disabled]="!amount || amount === 0"
   >
   Transfer
 </button>
-<div *ngIf="userMsg" class="transfer-msg">
+<div *ngIf="userMsg" [class.insufficient]="isInsufficientFunds" class="transfer-msg">
   {{userMsg}}
 </div>
 </section>

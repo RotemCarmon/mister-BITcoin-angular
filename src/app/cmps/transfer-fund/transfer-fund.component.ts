@@ -14,16 +14,24 @@ export class TransferFundComponent implements OnInit {
   @Output() handleTransfer = new EventEmitter();
   amount: number;
   userMsg: string = null;
+  isInsufficientFunds: boolean = false;
   constructor() { }
-
+  
   onTransferFund(): void {
+    if(this.amount > this.maxCoins) {
+      this.isInsufficientFunds = true;
+      this.showUserMsg('Insufficient funds')
+      
+      return
+    }
+    this.isInsufficientFunds = false;
     this.handleTransfer.emit(this.amount)
-    this.showUserMsg()
+    this.showUserMsg(`You transferred ${this.amount} coins`)
     this.amount = null;
   }
   
-  showUserMsg (): void {
-    this.userMsg = `You transferred ${this.amount} coins`
+  showUserMsg (msg: string): void {
+    this.userMsg = msg;
     setTimeout(() => {
       this.userMsg = null;
     }, 3000);

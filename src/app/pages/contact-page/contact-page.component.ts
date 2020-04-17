@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy} from '@angular/core';
 import { ContactService } from 'src/app/services/contact.service';
 import { Contact } from 'src/app/models/contact.model';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -13,6 +14,7 @@ export class ContactPageComponent implements OnInit, OnDestroy {
   contacts : Contact[] = []
   subscription: Subscription
   filterBy = { term: '' }
+  faPlus = faPlus
   
 
   constructor(private contactService: ContactService) { }
