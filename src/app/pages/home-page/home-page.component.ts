@@ -3,7 +3,7 @@ import { UserService } from 'src/app/services/user-service.service';
 import { User } from 'src/app/models/user.model';
 import { BitcoinService } from 'src/app/services/bitcoin-service.service';
 import { Move } from 'src/app/models/move.model';
-import { DatePipe } from '@angular/common';
+
 
 @Component({
   selector: 'home-page',
@@ -16,19 +16,19 @@ export class HomePageComponent implements OnInit {
   USD: number;
   movesToShow: Move[];
   general = true;
-  movesChart: any;
+  
 
   constructor(
     private userService: UserService,
     private bitcoinService: BitcoinService,
-    private datePipe: DatePipe
+   
   ) {}
 
   ngOnInit(): void {
     this.getUser();
     this.getRate();
     this.getMovesToShow();
-    this.setChartData();
+  
   }
 
   getUser() {
@@ -49,34 +49,5 @@ export class HomePageComponent implements OnInit {
     this.rate = rate;
     this.USD = (1 / this.rate) * this.user.coins;
   }
-  setChartData(): void {
-     
-    const chart = {
-      type: 'LineChart',
-      data: this.user.moves.map<Array<any>>((move) => {
-        var at = this.datePipe.transform(move.at , 'MMM d, y')
-        return [at, move.amount]
-      }),
-      title: 'Moves history',
-      options: {
-        legend: { position: 'none' },
-        backgroundColor: {
-          fill: 'rgb(41, 41, 66)',
-        },
-        colors: ['#E88C30'],
-        titleTextStyle: { color: '#FFF', fontSize: 14 },
-        vAxis: {
-          textStyle: { color: '#8089A4' },
-        },
-        hAxis: {
-          format: 'short',
-          textStyle: { color: '#8089A4' },
-        },
-        chartArea:{ width:'84%', height:'65%'},
-        curveType:'function'
-      },
-    };
-    this.movesChart = chart;
-    
-  }
+  
 }

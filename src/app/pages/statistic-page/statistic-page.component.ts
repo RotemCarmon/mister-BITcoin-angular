@@ -58,12 +58,20 @@ export class StatisticPageComponent implements OnInit {
     }
 
     this.marketChartName = marketPrice.name;
-    this.marketChartData = marketPrice.values.map((value) => {
-      value.x = this.datePipe.transform(value.x * 1000, 'dd MMM yyyy');
-      return Object.values(value);
-    });
+    this.marketChartData = this.exportDataFromRes(marketPrice);
   }
   
+
+async getDataApi(dataName, KEY, func){
+  var dataName: any = JSON.parse(localStorage.getItem(KEY));
+
+  if (!dataName) {
+    const prm = await func;
+    dataName = prm.data;
+    localStorage.setItem(KEY, JSON.stringify(dataName));
+  }
+}
+
   async getTradeVolume() {
     var tradeVolume: any = JSON.parse(localStorage.getItem('tradeVolume'));
     
@@ -74,10 +82,7 @@ export class StatisticPageComponent implements OnInit {
     }
     
     this.tradeChartName = tradeVolume.name;
-    this.tradeChartData = tradeVolume.values.map((value) => {
-      value.x = this.datePipe.transform(value.x * 1000, 'dd MMM yyyy');
-      return Object.values(value);
-    });
+    this.tradeChartData = this.exportDataFromRes(tradeVolume);
   }
   
   async getConfirmedTransactions() {
@@ -95,9 +100,14 @@ export class StatisticPageComponent implements OnInit {
         }
         
         this.transactionChartName = confirmedTransactions.name;
-        this.transactionChartData = confirmedTransactions.values.map((value) => {
+        this.transactionChartData = this.exportDataFromRes(confirmedTransactions);
+      }
+
+      exportDataFromRes(res): any[] {
+        const data = res.values.map((value) => {
           value.x = this.datePipe.transform(value.x * 1000, 'dd MMM yyyy');
           return Object.values(value);
         });
+        return data
       }
 }
