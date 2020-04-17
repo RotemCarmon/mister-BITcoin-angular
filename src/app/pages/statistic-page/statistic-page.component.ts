@@ -43,9 +43,11 @@ export class StatisticPageComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.getMarketPrice();
-    this.getTradeVolume();
-    this.getConfirmedTransactions();
+    setTimeout(() => {   
+      this.getMarketPrice();
+      this.getTradeVolume();
+      this.getConfirmedTransactions();
+    }, 2000);
   }
 
   async getMarketPrice() {

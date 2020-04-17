@@ -1,30 +1,49 @@
+
 <google-chart
-  class="chart market-price"
-  [type]="marketChartType"
-  [data]="marketChartData"
-  [title]="marketChartName"
+*ngIf="marketChartData.length; else loading"
+class="chart market-price"
+[type]="marketChartType"
+[data]="marketChartData"
+[title]="marketChartName"
+[options]="chartOption"
+[dynamicResize]="true"
+></google-chart>
+<ng-template #loading>
+  <div class="loading-container flex justify-center align-center">
+    <img class="loading" src="../../..//assets/load/Spinner-1s-143px.svg" alt="loading" >
+  </div>
+</ng-template>
+
+<div class="small-charts flex space-around">
+  
+  <google-chart
+  *ngIf="tradeChartData.length; else loading"
+  class="chart trade-volume"
+  [type]="tradeChartType"
+  [data]="tradeChartData"
+  [title]="tradeChartName"
   [options]="chartOption"
   [dynamicResize]="true"
   ></google-chart>
-
-<div class="small-charts flex">
-
-    <google-chart
-      class="chart trade-volume"
-      [type]="tradeChartType"
-      [data]="tradeChartData"
-      [title]="tradeChartName"
-      [options]="chartOption"
-      [dynamicResize]="true"
-    ></google-chart>
-    
-    <google-chart
-      class="chart confirm-transaction"
-      [type]= "transactionChartType"
-      [data]= "transactionChartData"
-      [title]="transactionChartName"
-      [options]="chartOption"
-      [dynamicResize]="true"
-    ></google-chart>
-    
+  <ng-template #loading>
+    <div class="loading-container flex justify-center align-center">
+      <img class="loading" src="../../..//assets/load/Spinner-1s-143px.svg" alt="loading" >
+    </div>
+  </ng-template>
+  
+  <google-chart
+  *ngIf="transactionChartData.length; else loading"
+  class="chart confirm-transaction"
+  [type]= "transactionChartType"
+  [data]= "transactionChartData"
+  [title]="transactionChartName"
+  [options]="chartOption"
+  [dynamicResize]="true"
+  ></google-chart>
+  <ng-template #loading>
+    <div class="loading-container flex justify-center align-center">
+      <img class="loading" src="../../..//assets/load/Spinner-1s-143px.svg" alt="loading" >
+    </div>
+  </ng-template>
+  
 </div>
