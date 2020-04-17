@@ -23,6 +23,7 @@ import { SignupComponent } from './pages/signup/signup.component';
 import { TransferFundComponent } from './cmps/transfer-fund/transfer-fund.component';
 import { MoveListComponent } from './cmps/move-list/move-list.component';
 import { MovePreviewComponent } from './cmps/move-preview/move-preview.component';
+import { ChartComponent } from "./cmps/chart/chart.component";
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 
@@ -44,6 +45,7 @@ import { environment } from '../environments/environment';
     TransferFundComponent,
     MoveListComponent,
     MovePreviewComponent,
+    ChartComponent
   ],
   imports: [
     BrowserModule,

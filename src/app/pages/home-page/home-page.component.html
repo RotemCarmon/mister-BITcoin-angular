@@ -20,16 +20,8 @@
                 <h3>Balance: {{USD | currency: 'USD'}}</h3>
             </div>
         </section>
-        <div class="chart" *ngIf="this.user.moves.length">
-            <google-chart
-                class="chart moves-history"
-                [type]="movesChart.type"
-                [data]="movesChart.data"
-                [title]="movesChart.title"
-                [options]="movesChart.options"
-                [dynamicResize]="true"
-            ></google-chart>
-        </div>
+        <app-chart [user]="user"></app-chart>
+
     </section>
     <section class="user-moves">
         <h2 *ngIf="movesToShow && movesToShow.length; else noMoves">Your last {{movesToShow.length}} moves</h2>
